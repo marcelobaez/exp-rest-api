@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  exp-rest-api:
+    build:
+      context: .
+    ports:
+      - 4000:4000
+    environment:
+      - NODE_ORACLEDB_USER=${NODE_ORACLEDB_USER}
+      - NODE_ORACLEDB_PASSWORD=${NODE_ORACLEDB_PASSWORD}
+      - NODE_ORACLEDB_CONNECTIONSTRING=${NODE_ORACLEDB_CONNECTIONSTRING}
+    volumes:
+      - ./:/exp-rest-api
