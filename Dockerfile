@@ -1,11 +1,11 @@
-FROM marcelobaez/oracle-ic19
+FROM marcelobaez/oracle-ic19:0.1.0
 
-WORKDIR /exp-rest-api
+WORKDIR /usr/src/exp-rest-api
 
 COPY package*.json ./
 
-RUN npm ci --only=production
+RUN npm install
 
 COPY . .
 
-CMD ["node", "/exp-rest-api/src/index.js"]
+CMD ["node", "/src/index.js"]

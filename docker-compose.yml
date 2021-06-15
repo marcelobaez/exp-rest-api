@@ -11,4 +11,5 @@ services:
       - NODE_ORACLEDB_PASSWORD=${NODE_ORACLEDB_PASSWORD}
       - NODE_ORACLEDB_CONNECTIONSTRING=${NODE_ORACLEDB_CONNECTIONSTRING}
     volumes:
-      - ./:/exp-rest-api
+      - .:/usr/src/exp-rest-api
+    command: npm run dev
